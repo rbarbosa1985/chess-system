@@ -25,7 +25,7 @@ public class Program {
 				System.out.println();
 				System.out.print("Source: ");
 				ChessPosition source = UI.readChessPosition(sc);
-				UI.clearScreen();
+				
 				boolean[][] possibleMoves = chessMatch.possibleMoves(source);
 				UI.printBoard(chessMatch.getPieces(), possibleMoves);
 				
