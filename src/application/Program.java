@@ -42,7 +42,11 @@ public class Program {
 				
 				if(chessMatch.getPromoted() != null) {
 					System.out.print("Escolha a peça que deseja ( B / N / R / Q ): ");
-					String type = sc.nextLine();
+					String type = sc.nextLine().toUpperCase();
+					while (!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")) {
+						System.out.print("Peça escolhida invalida! Por favor escolha a peça que deseja ( B / N / R / Q ): ");
+						type = sc.nextLine().toUpperCase();
+					}
 					chessMatch.replacePromotedPiece(type);
 				}
 				
